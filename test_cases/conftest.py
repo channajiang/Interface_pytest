@@ -1,7 +1,10 @@
 import sys
 import pytest
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../libs')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '/var/jenkins_home/workspace/Interface_pytest'
+                                                                        '/libs/shop.py')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '/var/jenkins_home/workspace/Interface_pytest'
+                                                                        '/libs/login.py')))
 from libs.shop import Shop
 from libs.login import Login
 # from delivery_systemB.configs.config import NAME_PSW
