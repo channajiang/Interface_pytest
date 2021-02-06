@@ -1,8 +1,9 @@
-from libs.shop import Shop
-from libs.login import Login
+import sys
 import pytest
 import os
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
+from libs.shop import Shop
+from libs.login import Login
 # from delivery_systemB.configs.config import NAME_PSW
 #conftest放到哪一个包，只对这个包起作用！，比如当前是test_case包
 
