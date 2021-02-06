@@ -17,20 +17,20 @@ import os
 '''
 
 
-@pytest.fixture(scope='session',autouse=True)
-def start_running():
-    #在自动化执行一开始就执行下面的函数代码！
-    print("start")
-
-    #测试报告数据清除
-    try:
-        for one in os.listdir('../report/tmp'):
-            print(one)
-            if 'json' in one or 'txt' in one:
-                os.remove(f'../report/tmp/{one}')
-    except:
-        print('first time run')
-    yield  # 相当于teardown用法
+# @pytest.fixture(scope='session',autouse=True)
+# def start_running():
+#     #在自动化执行一开始就执行下面的函数代码！
+#     print("start")
+#
+#     #测试报告数据清除
+#     try:
+#         for one in os.listdir('../report/tmp'):
+#             print(one)
+#             if 'json' in one or 'txt' in one:
+#                 os.remove(f'../report/tmp/{one}')
+#     except:
+#         print('first time run')
+#     yield  # 相当于teardown用法
 
 #fixture里面函数不能直接调用执行，如果需要调试，需要先注释@pytest.fixture(scope='session',autouse=True)
 
